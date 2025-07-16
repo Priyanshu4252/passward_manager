@@ -4,13 +4,13 @@ def add_password():
     username = input("Pls enter your username by which your passward should be stored: ")
     passward = input("Pls enter the passward that you want to save: ")
     database_dictionary = (f"username:{username} | passward:{passward}" + "\n")
-    file_path = "C:/VS Code/Pythan/big projects/password_manager/database.txt" 
+    file_path = "database.txt" 
     with open(file_path, "a") as file : 
         file.write (database_dictionary)
 
 def checkout_password():
     try:
-        file_path = "C:/VS Code/Pythan/big projects/password_manager/database.txt"
+        file_path = "database.txt"
         with open(file_path, "r") as file :
             database = file.read()
             print(database)
