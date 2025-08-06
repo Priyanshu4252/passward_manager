@@ -29,14 +29,14 @@ def add_password():
     q = "".join(list_password)
 
     database_dictionary = (f"{username} | {q}" + "\n")
-    file_path = "C:/VS Code/Pythan/big projects/password_manager/database.txt" 
+    file_path = "database.txt" 
     with open(file_path, "a") as file : 
         file.write (database_dictionary)
 
 def checkout_password():
     decrypting_password_list= []
     try:
-        file_path = "C:/VS Code/Pythan/big projects/password_manager/database.txt"
+        file_path = "database.txt"
         with open(file_path, "r") as file :
             database = file.read()
             print(database)
